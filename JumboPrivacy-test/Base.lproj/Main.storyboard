@@ -14,13 +14,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1A-J3-HoK" userLabel="WebView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="448"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JNi-Hq-RPi">
+                                <rect key="frame" x="0.0" y="492" width="414" height="340"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wck-Qt-jaW">
+                                <rect key="frame" x="30" y="832" width="354" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y9F-Fz-Yyl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Start Operation">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JNi-Hq-RPi" secondAttribute="trailing" id="CHA-nJ-VVM"/>
+                            <constraint firstItem="JNi-Hq-RPi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Psx-JC-Tux"/>
+                            <constraint firstItem="K1A-J3-HoK" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="QBo-ZN-W83"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wck-Qt-jaW" secondAttribute="bottom" id="VGh-0r-ayY"/>
+                            <constraint firstItem="JNi-Hq-RPi" firstAttribute="top" secondItem="K1A-J3-HoK" secondAttribute="bottom" id="WS8-zX-XJL"/>
+                            <constraint firstItem="K1A-J3-HoK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YGk-Iz-yFw"/>
+                            <constraint firstItem="wck-Qt-jaW" firstAttribute="top" secondItem="JNi-Hq-RPi" secondAttribute="bottom" id="dUg-vD-ijH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wck-Qt-jaW" secondAttribute="trailing" constant="30" id="e33-Rf-3Xr"/>
+                            <constraint firstItem="wck-Qt-jaW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="emz-Oa-NbW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K1A-J3-HoK" secondAttribute="trailing" id="lg1-Td-h88"/>
+                            <constraint firstItem="K1A-J3-HoK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qCA-FN-D1t"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="operationsStatusTableView" destination="JNi-Hq-RPi" id="LjN-x3-Fvr"/>
+                        <outlet property="startOperationsButton" destination="wck-Qt-jaW" id="U9y-Rv-WUT"/>
+                        <outlet property="webViewContainer" destination="K1A-J3-HoK" id="jdc-im-gUH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="119"/>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
     </scenes>
 </document>

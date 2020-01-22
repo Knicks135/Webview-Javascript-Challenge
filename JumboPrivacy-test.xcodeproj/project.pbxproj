@@ -16,6 +16,7 @@
 		C6DB372A23D4FAFB00871AFC /* OperationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB372923D4FAFB00871AFC /* OperationService.swift */; };
 		C6DB373123D51BCE00871AFC /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB373023D51BCE00871AFC /* MessageData.swift */; };
 		C6DB374223D88AB400871AFC /* JumboPrivacyTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB374123D88AB400871AFC /* JumboPrivacyTesting.swift */; };
+		C6DB374B23D88FC300871AFC /* WebViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB374A23D88FC300871AFC /* WebViewHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		C6DB373F23D88AB400871AFC /* JumboPrivacyTesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JumboPrivacyTesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DB374123D88AB400871AFC /* JumboPrivacyTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumboPrivacyTesting.swift; sourceTree = "<group>"; };
 		C6DB374323D88AB400871AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6DB374A23D88FC300871AFC /* WebViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		C6DB36F923D4EE7800871AFC /* JumboPrivacy-test */ = {
 			isa = PBXGroup;
 			children = (
+				C6DB374923D88F6300871AFC /* Views */,
 				C6DB372D23D51AFC00871AFC /* Models */,
 				C6DB371E23D4F08000871AFC /* Controllers */,
 				C6DB371D23D4F07600871AFC /* Services */,
@@ -127,6 +130,14 @@
 				C6DB374323D88AB400871AFC /* Info.plist */,
 			);
 			path = JumboPrivacyTesting;
+			sourceTree = "<group>";
+		};
+		C6DB374923D88F6300871AFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6DB374A23D88FC300871AFC /* WebViewHandler.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			files = (
 				C6DB373123D51BCE00871AFC /* MessageData.swift in Sources */,
 				C6DB36FB23D4EE7800871AFC /* AppDelegate.swift in Sources */,
+				C6DB374B23D88FC300871AFC /* WebViewHandler.swift in Sources */,
 				C6DB372623D4F37600871AFC /* MainVC.swift in Sources */,
 				C6DB36FD23D4EE7800871AFC /* SceneDelegate.swift in Sources */,
 				C6DB372A23D4FAFB00871AFC /* OperationService.swift in Sources */,

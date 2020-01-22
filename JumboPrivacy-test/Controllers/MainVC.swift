@@ -9,66 +9,39 @@
 import UIKit
 import WebKit
 
-class MainVC: UIViewController, WKScriptMessageHandler, WKNavigationDelegate {
+class MainVC: UIViewController {
    
-    var webView: WKWebView?
-    var siteFinishedLoading = false
+    @IBOutlet weak var webViewContainer: UIView!
+    @IBOutlet weak var operationsStatusTableView: UITableView!
+    @IBOutlet weak var startOperationsButton: UIButton!
+    
+    private var webViewHandler: WebViewHandler?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .blue
+        createWebView()
+        initializeWebView()
         
-        addScriptMessagesHandler()
-        loadPage()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-       
-//        OperationService.shared.initializeJSContext()
-//        OperationService.shared.initializeMessageHandler()
-//        OperationService.shared.startOperation()
     }
 
-    func loadJsScript() -> String? {
-        do {
-            guard let scriptUrl = URL(string: "https://jumboassetsv1.blob.core.windows.net/publicfiles/interview_bundle.js") else {
-                print("Couldn't load URL for script")
-                return nil
-            }
-            let interviewScript = try String(contentsOf: scriptUrl,
-                                             encoding: String.Encoding.utf8)
-            return interviewScript
-        } catch let error {
-            print("Error while processing script file: \(error)")
-            return nil
-        }
+    func createWebView() {
+        let webViewHandler = WebViewHandler()
+        webViewHandler.webView.frame = webViewContainer.frame
+        webViewContainer.addSubview(webViewHandler.webView)
+        self.webViewHandler = webViewHandler
     }
     
-    func addScriptMessagesHandler() {
-        let config = WKWebViewConfiguration()
-        let userContentController = WKUserContentController()
-        
-        guard let script = loadJsScript() else { return }
-        let wkScript = WKUserScript(source: script, injectionTime: .atDocumentStart, forMainFrameOnly: false)
-        userContentController.addUserScript(wkScript)
-        userContentController.add(self, name: "jumbo")
-
-        config.userContentController = userContentController
-
-        self.webView = WKWebView(frame: self.view.bounds, configuration: config)
-        self.webView?.navigationDelegate = self
-        self.view = self.webView
-    }
-    
-    func loadPage() {
-        guard let jumboUrl = URL(string: "https://blog.jumboprivacy.com/") else {
-            print("URL for jumbo cannot be made")
+    func initializeWebView() {
+        guard let webView = webViewHandler else {
+            print("Webview handler doesn't exist during initialization")
             return
         }
-        webView?.load(URLRequest(url: jumboUrl))
+        webView.loadPage()
     }
     
     @objc func handleIncomingMessage(notification: Notification) {
@@ -93,27 +66,5 @@ class MainVC: UIViewController, WKScriptMessageHandler, WKNavigationDelegate {
                 print("There was an error serializing JSON object from incoming message, error: \(error.localizedDescription)")
             }
         }
-    }
-    
-    //MARK:- WKNavigationDelegate
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        let id = "1"
-        let execString = "startOperation('\(id)')"
-        webView.evaluateJavaScript(execString) { (result, error) in
-            guard error == nil, let result = result else {
-                print("Error!")
-                return
-            }
-            print(result)
-        }
-    }
-    
-    //MARK:- WKScriptMessageHandler
-    
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-           if message.name == "jumbo", let messageBody = message.body as? String {
-               print(messageBody)
-           }
     }
 }

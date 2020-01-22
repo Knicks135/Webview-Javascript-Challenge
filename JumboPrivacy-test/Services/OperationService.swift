@@ -13,11 +13,6 @@ final class OperationService {
     public var operationQueue: [MessageData] = []
     private var currentGeneratedId: Int = 0
     
-    public func initializeJSContext() {
-    
-        
-    }
-    
     private func generatedNextId() {
         
     }
