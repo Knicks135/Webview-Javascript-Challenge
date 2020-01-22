@@ -17,10 +17,6 @@ final class OperationService {
         
     }
     
-    public func initializeMessageHandler() {
-
-    }
-    
     public func startOperation() {
 
     }

@@ -9,16 +9,17 @@
 import UIKit
 import WebKit
 
-class MainVC: UIViewController {
-   
+class MainVC: UIViewController, WebViewHandlerDelegate {
     @IBOutlet weak var webViewContainer: UIView!
     @IBOutlet weak var operationsStatusTableView: UITableView!
     @IBOutlet weak var startOperationsButton: UIButton!
     
     private var webViewHandler: WebViewHandler?
+    var pageLoaded = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupStartOperationsButton()
         createWebView()
         initializeWebView()
         
@@ -28,15 +29,21 @@ class MainVC: UIViewController {
         super.viewDidAppear(animated)
         
     }
+    
+    private func setupStartOperationsButton() {
+        startOperationsButton.isHidden = true
+        startOperationsButton.layer.cornerRadius = 10
+    }
 
-    func createWebView() {
+    private func createWebView() {
         let webViewHandler = WebViewHandler()
         webViewHandler.webView.frame = webViewContainer.frame
+        webViewHandler.delegate = self
         webViewContainer.addSubview(webViewHandler.webView)
         self.webViewHandler = webViewHandler
     }
     
-    func initializeWebView() {
+    private func initializeWebView() {
         guard let webView = webViewHandler else {
             print("Webview handler doesn't exist during initialization")
             return
@@ -66,5 +73,15 @@ class MainVC: UIViewController {
                 print("There was an error serializing JSON object from incoming message, error: \(error.localizedDescription)")
             }
         }
+    }
+    
+    
+    //MARK:- WebViewHandlerDelegate
+    func pageFinishedLoading() {
+        startOperationsButton.isHidden = false
+    }
+    
+    func didReceiveMessage(message: Any) {
+        
     }
 }

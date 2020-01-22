@@ -9,10 +9,19 @@
 import Foundation
 import WebKit
 
+/// Implement this protocol to be notified about messages received by the WebView
+/// via postMessage
+protocol WebViewHandlerDelegate {
+    /// Called when a message is received by the WebView
+    /// - Parameter message: the message received
+    func didReceiveMessage(message:Any)
+    func pageFinishedLoading()
+}
+
 final class WebViewHandler: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
     
     var webView: WKWebView
-    var pageLoaded = false
+    var delegate: WebViewHandlerDelegate?
     
     override init() {
         let config = WKWebViewConfiguration()
@@ -57,6 +66,7 @@ final class WebViewHandler: NSObject, WKNavigationDelegate, WKScriptMessageHandl
     
     //MARK:- WKNavigationDelegate
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        delegate?.pageFinishedLoading()
         let id = "1"
         let execString = "startOperation('\(id)')"
         webView.evaluateJavaScript(execString) { (result, error) in
