@@ -15,19 +15,11 @@
 		C6DB372623D4F37600871AFC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB372523D4F37600871AFC /* MainVC.swift */; };
 		C6DB372A23D4FAFB00871AFC /* OperationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB372923D4FAFB00871AFC /* OperationService.swift */; };
 		C6DB373123D51BCE00871AFC /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB373023D51BCE00871AFC /* MessageData.swift */; };
-		C6DB374223D88AB400871AFC /* JumboPrivacyTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB374123D88AB400871AFC /* JumboPrivacyTesting.swift */; };
 		C6DB374B23D88FC300871AFC /* WebViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB374A23D88FC300871AFC /* WebViewHandler.swift */; };
+		C6DB375323D8B45500871AFC /* OperationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB375123D8B45500871AFC /* OperationTableViewCell.swift */; };
+		C6DB375423D8B45500871AFC /* OperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6DB375223D8B45500871AFC /* OperationTableViewCell.xib */; };
+		C6DB375823D8CA7400871AFC /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB375723D8CA7400871AFC /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C6DB374423D88AB400871AFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C6DB36EF23D4EE7800871AFC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6DB36F623D4EE7800871AFC;
-			remoteInfo = "JumboPrivacy-test";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C6DB36F723D4EE7800871AFC /* JumboPrivacy-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JumboPrivacy-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,21 +32,14 @@
 		C6DB372523D4F37600871AFC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C6DB372923D4FAFB00871AFC /* OperationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationService.swift; sourceTree = "<group>"; };
 		C6DB373023D51BCE00871AFC /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
-		C6DB373F23D88AB400871AFC /* JumboPrivacyTesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JumboPrivacyTesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6DB374123D88AB400871AFC /* JumboPrivacyTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumboPrivacyTesting.swift; sourceTree = "<group>"; };
-		C6DB374323D88AB400871AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6DB374A23D88FC300871AFC /* WebViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewHandler.swift; sourceTree = "<group>"; };
+		C6DB375123D8B45500871AFC /* OperationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTableViewCell.swift; sourceTree = "<group>"; };
+		C6DB375223D8B45500871AFC /* OperationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationTableViewCell.xib; sourceTree = "<group>"; };
+		C6DB375723D8CA7400871AFC /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C6DB36F423D4EE7800871AFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6DB373C23D88AB400871AFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -68,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				C6DB36F923D4EE7800871AFC /* JumboPrivacy-test */,
-				C6DB374023D88AB400871AFC /* JumboPrivacyTesting */,
 				C6DB36F823D4EE7800871AFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				C6DB36F723D4EE7800871AFC /* JumboPrivacy-test.app */,
-				C6DB373F23D88AB400871AFC /* JumboPrivacyTesting.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +68,7 @@
 		C6DB36F923D4EE7800871AFC /* JumboPrivacy-test */ = {
 			isa = PBXGroup;
 			children = (
+				C6DB375523D8CA4800871AFC /* Helpers */,
 				C6DB374923D88F6300871AFC /* Views */,
 				C6DB372D23D51AFC00871AFC /* Models */,
 				C6DB371E23D4F08000871AFC /* Controllers */,
@@ -123,21 +107,30 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C6DB374023D88AB400871AFC /* JumboPrivacyTesting */ = {
-			isa = PBXGroup;
-			children = (
-				C6DB374123D88AB400871AFC /* JumboPrivacyTesting.swift */,
-				C6DB374323D88AB400871AFC /* Info.plist */,
-			);
-			path = JumboPrivacyTesting;
-			sourceTree = "<group>";
-		};
 		C6DB374923D88F6300871AFC /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				C6DB374A23D88FC300871AFC /* WebViewHandler.swift */,
+				C6DB375123D8B45500871AFC /* OperationTableViewCell.swift */,
+				C6DB375223D8B45500871AFC /* OperationTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C6DB375523D8CA4800871AFC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C6DB375623D8CA5100871AFC /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C6DB375623D8CA5100871AFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C6DB375723D8CA7400871AFC /* UITableView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,24 +153,6 @@
 			productReference = C6DB36F723D4EE7800871AFC /* JumboPrivacy-test.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C6DB373E23D88AB400871AFC /* JumboPrivacyTesting */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6DB374623D88AB400871AFC /* Build configuration list for PBXNativeTarget "JumboPrivacyTesting" */;
-			buildPhases = (
-				C6DB373B23D88AB400871AFC /* Sources */,
-				C6DB373C23D88AB400871AFC /* Frameworks */,
-				C6DB373D23D88AB400871AFC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C6DB374523D88AB400871AFC /* PBXTargetDependency */,
-			);
-			name = JumboPrivacyTesting;
-			productName = JumboPrivacyTesting;
-			productReference = C6DB373F23D88AB400871AFC /* JumboPrivacyTesting.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,10 +165,6 @@
 				TargetAttributes = {
 					C6DB36F623D4EE7800871AFC = {
 						CreatedOnToolsVersion = 11.3;
-					};
-					C6DB373E23D88AB400871AFC = {
-						CreatedOnToolsVersion = 11.3;
-						TestTargetID = C6DB36F623D4EE7800871AFC;
 					};
 				};
 			};
@@ -211,7 +182,6 @@
 			projectRoot = "";
 			targets = (
 				C6DB36F623D4EE7800871AFC /* JumboPrivacy-test */,
-				C6DB373E23D88AB400871AFC /* JumboPrivacyTesting */,
 			);
 		};
 /* End PBXProject section */
@@ -224,13 +194,7 @@
 				C6DB370723D4EE7B00871AFC /* LaunchScreen.storyboard in Resources */,
 				C6DB370423D4EE7B00871AFC /* Assets.xcassets in Resources */,
 				C6DB370223D4EE7800871AFC /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6DB373D23D88AB400871AFC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C6DB375423D8B45500871AFC /* OperationTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,29 +208,15 @@
 				C6DB373123D51BCE00871AFC /* MessageData.swift in Sources */,
 				C6DB36FB23D4EE7800871AFC /* AppDelegate.swift in Sources */,
 				C6DB374B23D88FC300871AFC /* WebViewHandler.swift in Sources */,
+				C6DB375323D8B45500871AFC /* OperationTableViewCell.swift in Sources */,
 				C6DB372623D4F37600871AFC /* MainVC.swift in Sources */,
 				C6DB36FD23D4EE7800871AFC /* SceneDelegate.swift in Sources */,
 				C6DB372A23D4FAFB00871AFC /* OperationService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6DB373B23D88AB400871AFC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C6DB374223D88AB400871AFC /* JumboPrivacyTesting.swift in Sources */,
+				C6DB375823D8CA7400871AFC /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C6DB374523D88AB400871AFC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C6DB36F623D4EE7800871AFC /* JumboPrivacy-test */;
-			targetProxy = C6DB374423D88AB400871AFC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C6DB370023D4EE7800871AFC /* Main.storyboard */ = {
@@ -440,46 +390,6 @@
 			};
 			name = Release;
 		};
-		C6DB374723D88AB400871AFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7MV9V58HA4;
-				INFOPLIST_FILE = JumboPrivacyTesting/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidshi.JumboPrivacyTesting;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JumboPrivacy-test.app/JumboPrivacy-test";
-			};
-			name = Debug;
-		};
-		C6DB374823D88AB400871AFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7MV9V58HA4;
-				INFOPLIST_FILE = JumboPrivacyTesting/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.davidshi.JumboPrivacyTesting;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JumboPrivacy-test.app/JumboPrivacy-test";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -497,15 +407,6 @@
 			buildConfigurations = (
 				C6DB371723D4EE7B00871AFC /* Debug */,
 				C6DB371823D4EE7B00871AFC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6DB374623D88AB400871AFC /* Build configuration list for PBXNativeTarget "JumboPrivacyTesting" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C6DB374723D88AB400871AFC /* Debug */,
-				C6DB374823D88AB400871AFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

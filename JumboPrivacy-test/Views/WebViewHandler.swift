@@ -14,7 +14,7 @@ import WebKit
 protocol WebViewHandlerDelegate {
     /// Called when a message is received by the WebView
     /// - Parameter message: the message received
-    func didReceiveMessage(message:Any)
+    func didReceiveMessage(message: String)
     func pageFinishedLoading()
 }
 
@@ -41,7 +41,7 @@ final class WebViewHandler: NSObject, WKNavigationDelegate, WKScriptMessageHandl
         self.webView.navigationDelegate = self
     }
     
-    func loadJsScript() -> String? {
+    private func loadJsScript() -> String? {
         do {
             guard let scriptUrl = URL(string: "https://jumboassetsv1.blob.core.windows.net/publicfiles/interview_bundle.js") else {
                 print("Couldn't load URL for script")
@@ -56,7 +56,8 @@ final class WebViewHandler: NSObject, WKNavigationDelegate, WKScriptMessageHandl
         }
     }
     
-    func loadPage() {
+    /// Loads webpage for Jumbo Privacy
+    public func loadPage() {
         guard let jumboUrl = URL(string: "https://blog.jumboprivacy.com/") else {
             print("URL for jumbo cannot be made")
             return
@@ -64,10 +65,9 @@ final class WebViewHandler: NSObject, WKNavigationDelegate, WKScriptMessageHandl
         webView.load(URLRequest(url: jumboUrl))
     }
     
-    //MARK:- WKNavigationDelegate
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        delegate?.pageFinishedLoading()
-        let id = "1"
+    /// Invokes function startOperation() in the javascript code
+    /// - Parameter id: Unique string id to identify MessageData
+    public func startOperation(withId id: String) {
         let execString = "startOperation('\(id)')"
         webView.evaluateJavaScript(execString) { (result, error) in
             guard error == nil, let result = result else {
@@ -78,10 +78,16 @@ final class WebViewHandler: NSObject, WKNavigationDelegate, WKScriptMessageHandl
         }
     }
     
+    //MARK:- WKNavigationDelegate
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        delegate?.pageFinishedLoading()
+    }
+    
     //MARK:- WKScriptMessageHandler
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if message.name == "jumbo", let messageBody = message.body as? String {
+        if message.name == "jumbo", let messageBody = message.body as? String{
             print(messageBody)
+            delegate?.didReceiveMessage(message: messageBody)
         }
     }
 }
