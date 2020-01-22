@@ -28,10 +28,10 @@ final class OperationService {
         return nextId
     }
     
-    public func startOperation() {
-
-    }
-    
+    /// Parses out message handler data and prepares a new MessageData to add to the operationQueue.
+    /// - Parameters:
+    ///   - dictionaryData: data to be parse which is a dictionary data type
+    ///   - completionHandler: once the function completes it would return the row index to be updated in the table view
     public func parseMessageHandlerData(forNew dictionaryData: [String: Any], completionHandler: @escaping (Result<Int, ErrorTypes>) -> Void) {
         guard
             let id = dictionaryData["id"] as? String,
@@ -76,7 +76,12 @@ final class OperationService {
         completionHandler(.success(currentIndex))
         return
     }
-    
+        
+    /// Parses the message from the message handler where the operation is already in the queue.  It would update MessageData object with the latest information
+    /// - Parameters:
+    ///   - dictionaryData: data to be parse which is a dictionary data type
+    ///   - messageDataIndex: the index of the operationQueue where the messageData exists
+    ///   - completionHandler: returns an error if there is one
     public func parseMessageHandlerData(forExisting dictionaryData: [String: Any], atIndex messageDataIndex: Int, completionHandler: @escaping (Result<Bool, ErrorTypes>) -> Void) {
         guard
             let _ = dictionaryData["id"] as? String,
