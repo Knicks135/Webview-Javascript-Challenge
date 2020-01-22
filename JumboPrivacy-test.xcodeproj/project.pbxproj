@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		C6DB36FB23D4EE7800871AFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB36FA23D4EE7800871AFC /* AppDelegate.swift */; };
 		C6DB36FD23D4EE7800871AFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB36FC23D4EE7800871AFC /* SceneDelegate.swift */; };
-		C6DB36FF23D4EE7800871AFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB36FE23D4EE7800871AFC /* ViewController.swift */; };
 		C6DB370223D4EE7800871AFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DB370023D4EE7800871AFC /* Main.storyboard */; };
 		C6DB370423D4EE7B00871AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6DB370323D4EE7B00871AFC /* Assets.xcassets */; };
 		C6DB370723D4EE7B00871AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DB370523D4EE7B00871AFC /* LaunchScreen.storyboard */; };
-		C6DB371223D4EE7B00871AFC /* JumboPrivacy_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB371123D4EE7B00871AFC /* JumboPrivacy_testTests.swift */; };
+		C6DB372623D4F37600871AFC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB372523D4F37600871AFC /* MainVC.swift */; };
+		C6DB372A23D4FAFB00871AFC /* OperationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB372923D4FAFB00871AFC /* OperationService.swift */; };
+		C6DB373123D51BCE00871AFC /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB373023D51BCE00871AFC /* MessageData.swift */; };
+		C6DB374223D88AB400871AFC /* JumboPrivacyTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DB374123D88AB400871AFC /* JumboPrivacyTesting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C6DB370E23D4EE7B00871AFC /* PBXContainerItemProxy */ = {
+		C6DB374423D88AB400871AFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C6DB36EF23D4EE7800871AFC /* Project object */;
 			proxyType = 1;
@@ -30,14 +32,16 @@
 		C6DB36F723D4EE7800871AFC /* JumboPrivacy-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JumboPrivacy-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DB36FA23D4EE7800871AFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6DB36FC23D4EE7800871AFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C6DB36FE23D4EE7800871AFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C6DB370123D4EE7800871AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6DB370323D4EE7B00871AFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6DB370623D4EE7B00871AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6DB370823D4EE7B00871AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6DB370D23D4EE7B00871AFC /* JumboPrivacy-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JumboPrivacy-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6DB371123D4EE7B00871AFC /* JumboPrivacy_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumboPrivacy_testTests.swift; sourceTree = "<group>"; };
-		C6DB371323D4EE7B00871AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6DB372523D4F37600871AFC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		C6DB372923D4FAFB00871AFC /* OperationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationService.swift; sourceTree = "<group>"; };
+		C6DB373023D51BCE00871AFC /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
+		C6DB373F23D88AB400871AFC /* JumboPrivacyTesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JumboPrivacyTesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6DB374123D88AB400871AFC /* JumboPrivacyTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumboPrivacyTesting.swift; sourceTree = "<group>"; };
+		C6DB374323D88AB400871AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6DB370A23D4EE7B00871AFC /* Frameworks */ = {
+		C6DB373C23D88AB400871AFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				C6DB36F923D4EE7800871AFC /* JumboPrivacy-test */,
-				C6DB371023D4EE7B00871AFC /* JumboPrivacy-testTests */,
+				C6DB374023D88AB400871AFC /* JumboPrivacyTesting */,
 				C6DB36F823D4EE7800871AFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				C6DB36F723D4EE7800871AFC /* JumboPrivacy-test.app */,
-				C6DB370D23D4EE7B00871AFC /* JumboPrivacy-testTests.xctest */,
+				C6DB373F23D88AB400871AFC /* JumboPrivacyTesting.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,9 +83,11 @@
 		C6DB36F923D4EE7800871AFC /* JumboPrivacy-test */ = {
 			isa = PBXGroup;
 			children = (
+				C6DB372D23D51AFC00871AFC /* Models */,
+				C6DB371E23D4F08000871AFC /* Controllers */,
+				C6DB371D23D4F07600871AFC /* Services */,
 				C6DB36FA23D4EE7800871AFC /* AppDelegate.swift */,
 				C6DB36FC23D4EE7800871AFC /* SceneDelegate.swift */,
-				C6DB36FE23D4EE7800871AFC /* ViewController.swift */,
 				C6DB370023D4EE7800871AFC /* Main.storyboard */,
 				C6DB370323D4EE7B00871AFC /* Assets.xcassets */,
 				C6DB370523D4EE7B00871AFC /* LaunchScreen.storyboard */,
@@ -90,13 +96,37 @@
 			path = "JumboPrivacy-test";
 			sourceTree = "<group>";
 		};
-		C6DB371023D4EE7B00871AFC /* JumboPrivacy-testTests */ = {
+		C6DB371D23D4F07600871AFC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C6DB371123D4EE7B00871AFC /* JumboPrivacy_testTests.swift */,
-				C6DB371323D4EE7B00871AFC /* Info.plist */,
+				C6DB372923D4FAFB00871AFC /* OperationService.swift */,
 			);
-			path = "JumboPrivacy-testTests";
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C6DB371E23D4F08000871AFC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6DB372523D4F37600871AFC /* MainVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C6DB372D23D51AFC00871AFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6DB373023D51BCE00871AFC /* MessageData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6DB374023D88AB400871AFC /* JumboPrivacyTesting */ = {
+			isa = PBXGroup;
+			children = (
+				C6DB374123D88AB400871AFC /* JumboPrivacyTesting.swift */,
+				C6DB374323D88AB400871AFC /* Info.plist */,
+			);
+			path = JumboPrivacyTesting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,22 +149,22 @@
 			productReference = C6DB36F723D4EE7800871AFC /* JumboPrivacy-test.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C6DB370C23D4EE7B00871AFC /* JumboPrivacy-testTests */ = {
+		C6DB373E23D88AB400871AFC /* JumboPrivacyTesting */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6DB371923D4EE7B00871AFC /* Build configuration list for PBXNativeTarget "JumboPrivacy-testTests" */;
+			buildConfigurationList = C6DB374623D88AB400871AFC /* Build configuration list for PBXNativeTarget "JumboPrivacyTesting" */;
 			buildPhases = (
-				C6DB370923D4EE7B00871AFC /* Sources */,
-				C6DB370A23D4EE7B00871AFC /* Frameworks */,
-				C6DB370B23D4EE7B00871AFC /* Resources */,
+				C6DB373B23D88AB400871AFC /* Sources */,
+				C6DB373C23D88AB400871AFC /* Frameworks */,
+				C6DB373D23D88AB400871AFC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C6DB370F23D4EE7B00871AFC /* PBXTargetDependency */,
+				C6DB374523D88AB400871AFC /* PBXTargetDependency */,
 			);
-			name = "JumboPrivacy-testTests";
-			productName = "JumboPrivacy-testTests";
-			productReference = C6DB370D23D4EE7B00871AFC /* JumboPrivacy-testTests.xctest */;
+			name = JumboPrivacyTesting;
+			productName = JumboPrivacyTesting;
+			productReference = C6DB373F23D88AB400871AFC /* JumboPrivacyTesting.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -150,7 +180,7 @@
 					C6DB36F623D4EE7800871AFC = {
 						CreatedOnToolsVersion = 11.3;
 					};
-					C6DB370C23D4EE7B00871AFC = {
+					C6DB373E23D88AB400871AFC = {
 						CreatedOnToolsVersion = 11.3;
 						TestTargetID = C6DB36F623D4EE7800871AFC;
 					};
@@ -170,7 +200,7 @@
 			projectRoot = "";
 			targets = (
 				C6DB36F623D4EE7800871AFC /* JumboPrivacy-test */,
-				C6DB370C23D4EE7B00871AFC /* JumboPrivacy-testTests */,
+				C6DB373E23D88AB400871AFC /* JumboPrivacyTesting */,
 			);
 		};
 /* End PBXProject section */
@@ -186,7 +216,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6DB370B23D4EE7B00871AFC /* Resources */ = {
+		C6DB373D23D88AB400871AFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -200,27 +230,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6DB36FF23D4EE7800871AFC /* ViewController.swift in Sources */,
+				C6DB373123D51BCE00871AFC /* MessageData.swift in Sources */,
 				C6DB36FB23D4EE7800871AFC /* AppDelegate.swift in Sources */,
+				C6DB372623D4F37600871AFC /* MainVC.swift in Sources */,
 				C6DB36FD23D4EE7800871AFC /* SceneDelegate.swift in Sources */,
+				C6DB372A23D4FAFB00871AFC /* OperationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6DB370923D4EE7B00871AFC /* Sources */ = {
+		C6DB373B23D88AB400871AFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6DB371223D4EE7B00871AFC /* JumboPrivacy_testTests.swift in Sources */,
+				C6DB374223D88AB400871AFC /* JumboPrivacyTesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C6DB370F23D4EE7B00871AFC /* PBXTargetDependency */ = {
+		C6DB374523D88AB400871AFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C6DB36F623D4EE7800871AFC /* JumboPrivacy-test */;
-			targetProxy = C6DB370E23D4EE7B00871AFC /* PBXContainerItemProxy */;
+			targetProxy = C6DB374423D88AB400871AFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -301,6 +333,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -354,6 +387,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -394,21 +428,19 @@
 			};
 			name = Release;
 		};
-		C6DB371A23D4EE7B00871AFC /* Debug */ = {
+		C6DB374723D88AB400871AFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MV9V58HA4;
-				INFOPLIST_FILE = "JumboPrivacy-testTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = JumboPrivacyTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davidshi.JumboPrivacy-testTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidshi.JumboPrivacyTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -416,21 +448,19 @@
 			};
 			name = Debug;
 		};
-		C6DB371B23D4EE7B00871AFC /* Release */ = {
+		C6DB374823D88AB400871AFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MV9V58HA4;
-				INFOPLIST_FILE = "JumboPrivacy-testTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = JumboPrivacyTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davidshi.JumboPrivacy-testTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidshi.JumboPrivacyTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -459,11 +489,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6DB371923D4EE7B00871AFC /* Build configuration list for PBXNativeTarget "JumboPrivacy-testTests" */ = {
+		C6DB374623D88AB400871AFC /* Build configuration list for PBXNativeTarget "JumboPrivacyTesting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C6DB371A23D4EE7B00871AFC /* Debug */,
-				C6DB371B23D4EE7B00871AFC /* Release */,
+				C6DB374723D88AB400871AFC /* Debug */,
+				C6DB374823D88AB400871AFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

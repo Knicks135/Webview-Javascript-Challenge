@@ -1,15 +1,14 @@
 //
-//  JumboPrivacy_testTests.swift
-//  JumboPrivacy-testTests
+//  JumboPrivacyTesting.swift
+//  JumboPrivacyTesting
 //
-//  Created by David Shi on 1/19/20.
+//  Created by David Shi on 1/22/20.
 //  Copyright © 2020 David Shi. All rights reserved.
 //
 
 import XCTest
-@testable import JumboPrivacy_test
 
-class JumboPrivacy_testTests: XCTestCase {
+class JumboPrivacyTesting: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -26,7 +25,7 @@ class JumboPrivacy_testTests: XCTestCase {
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
