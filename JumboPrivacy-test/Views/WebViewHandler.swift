@@ -74,7 +74,6 @@ final class WebViewHandler: NSObject, WKNavigationDelegate, WKScriptMessageHandl
                 print("Error!")
                 return
             }
-            print(result)
         }
     }
     
@@ -86,7 +85,6 @@ final class WebViewHandler: NSObject, WKNavigationDelegate, WKScriptMessageHandl
     //MARK:- WKScriptMessageHandler
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if message.name == "jumbo", let messageBody = message.body as? String{
-            print(messageBody)
             delegate?.didReceiveMessage(message: messageBody)
         }
     }
